@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;600&display=swap");
+
+$main-color: #ffca41;
+$main-font: #333333;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100vw;
+  max-height: 100vh;
+  font-family: "Dosis", sans-serif;
+  color: $main-font;
+}
+
+// --- Home ---
+
+.all {
+  margin-left: 0.7em;
+  margin-top: 0.7em;
+  h2 {
+    background-color: $main-color;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.875em;
+    padding-left: 1em;
+    width: 94%;
+    position: absolute;
+    top: 8.3em;
+  }
+  p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin-bottom: 2.5em;
+  }
+}
+
+.random {
+  @extend .all;
+  h2 {
+    top: 22em;
+  }
+}
+
+// --- Nav Bar ---
+
+.nav {
+  width: 94%;
+  background-color: $main-color;
+}

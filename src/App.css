@@ -1,38 +1,46 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  max-width: 100vw;
+  max-height: 100vh;
+  font-family: "Dosis", sans-serif;
+  color: #333333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.all, .random {
+  margin-left: 0.7em;
+  margin-top: 0.7em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.all h2, .random h2 {
+  background-color: #ffca41;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.875em;
+  padding-left: 1em;
+  width: 94%;
+  position: absolute;
+  top: 8.3em;
 }
 
-.App-link {
-  color: #61dafb;
+.all p, .random p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  margin-bottom: 2.5em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.random h2 {
+  top: 22em;
 }
+
+.nav {
+  width: 94%;
+  background-color: #ffca41;
+}
+/*# sourceMappingURL=App.css.map */
