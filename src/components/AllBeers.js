@@ -1,29 +1,23 @@
-import React from "react";
-import axios from "axios";
+import { Link } from "react-router-dom";
 
-class All extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: [],
-    };
-  }
-  componentDidMount() {
-    axios.get("https://ih-beers-api2.herokuapp.com/beers").then((result) => {
-      const name = result.data;
-      this.setState({ name });
-    });
-  }
+const AllBeers = (props) => {
+  return (
+    <div className="gallery">
+      {props.beerData.map((item, i) => (
+        <div className="product-card" key={i}>
+          <img src={item.image_url} alt="beer" />
+          <div className="content">
+            <h3>{item.name}</h3>
+            <p>{item.tagline}</p>
+            <p>Created by {item.contributed_by}</p>
+            <div className="button">
+              <Link to={`/details/${item._id}`}>Details </Link>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
 
-  render() {
-    return (
-      <div>
-        {this.state.name.map((item, i) => (
-          <p key={i}>{item.name}</p>
-        ))}
-      </div>
-    );
-  }
-}
-
-export default All;
+export default AllBeers;

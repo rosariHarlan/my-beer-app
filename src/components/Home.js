@@ -15,7 +15,9 @@ const Home = () => {
       </div>
       <div className="random">
         <img src="img/random.png" alt="One random beer" />
-        <h2>Random Beer</h2>
+        <h2>
+          <Link to="/random">Random Beer</Link>
+        </h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, a,
           eleifend vitae varius venenatis.

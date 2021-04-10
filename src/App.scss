@@ -2,6 +2,7 @@
 
 $main-color: #ffca41;
 $main-font: #333333;
+$body-bg: #e5e5e5;
 
 * {
   margin: 0;
@@ -14,6 +15,12 @@ body {
   max-height: 100vh;
   font-family: "Dosis", sans-serif;
   color: $main-font;
+  background-color: $body-bg;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 // --- Home ---
@@ -50,4 +57,42 @@ body {
 .nav {
   width: 94%;
   background-color: $main-color;
+}
+
+// --- Products Gallery ---
+
+.main {
+  margin-right: 0;
+}
+
+.product-card {
+  margin-top: 1.5em;
+  margin-left: 0.7em;
+  margin-right: 0;
+  display: flex;
+  gap: 0.3em;
+  img {
+    width: 30%;
+    height: 20vh;
+    object-fit: contain;
+  }
+}
+
+.content {
+  margin-top: 1em;
+  width: 45%;
+  h3 {
+    font-size: 1.875em;
+  }
+  p {
+    &:nth-of-type(1) {
+      font-weight: 600;
+      font-size: 0.8em;
+      color: $main-color;
+      width: 100%;
+    }
+    &:nth-of-type(2) {
+      font-size: 0.5em;
+    }
+  }
 }
