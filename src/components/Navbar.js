@@ -1,10 +1,15 @@
 import { Link } from "react-router-dom";
+import beerIcon from "./../beer-icon.png";
 
 const NavBar = () => {
   return (
-    <div>
-      <Link to="/" className="nav"></Link>
-    </div>
+    <header className="nav-container">
+      <nav>
+        <Link to="/">
+          <img src={beerIcon} alt="beer icon" />
+        </Link>
+      </nav>
+    </header>
   );
 };
 

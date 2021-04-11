@@ -2,6 +2,7 @@
 
 $main-color: #ffca41;
 $main-font: #333333;
+$light-color: rgba(51, 51, 51, 0.5);
 $body-bg: #e5e5e5;
 
 * {
@@ -12,7 +13,8 @@ $body-bg: #e5e5e5;
 
 body {
   max-width: 100vw;
-  max-height: 100vh;
+  min-height: 100vh;
+  // margin-bottom: 12em;
   font-family: "Dosis", sans-serif;
   color: $main-font;
   background-color: $body-bg;
@@ -23,12 +25,82 @@ a {
   color: inherit;
 }
 
+.button {
+  background-color: $main-color;
+  border: none;
+  border-radius: 40px;
+  color: #fff;
+  text-align: center;
+  width: 6em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+
+// --- Nav Bar ---
+
+.nav-container {
+  width: 100%;
+  height: 10vh;
+  background-color: $main-color;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  nav {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 3.5625em;
+    height: 3.5625em;
+    position: absolute;
+    left: calc(50% - 57px / 2 - 0.5px);
+    top: 1em;
+    img {
+      position: absolute;
+      right: 0.4em;
+      bottom: 0.1px;
+      width: 3em;
+    }
+  }
+}
+
+// --- Arrow ---
+
+.arrow {
+  width: 3.5625em;
+  height: 3.5625em;
+  background-color: $main-color;
+  position: absolute;
+  border-radius: 50%;
+  margin-top: 2em;
+  a {
+    position: relative;
+    right: 5.7em;
+    bottom: 2.8em;
+    img {
+      width: 60%;
+    }
+  }
+}
+
 // --- Home ---
+
+#home {
+  width: 100%;
+  h1 {
+    text-transform: uppercase;
+    font-size: 2em;
+    margin-left: 2.2em;
+    margin-top: 0.5em;
+  }
+  h2 {
+    margin-left: 3.8em;
+  }
+}
 
 .all {
   margin-left: 0.7em;
-  margin-top: 0.7em;
-  h2 {
+  margin-right: 0.7em;
+  margin-top: 1em;
+  h3 {
     background-color: $main-color;
     color: #fff;
     font-weight: 600;
@@ -36,63 +108,104 @@ a {
     padding-left: 1em;
     width: 94%;
     position: absolute;
-    top: 8.3em;
+    top: 11.5em;
   }
   p {
     font-size: 1.2em;
     line-height: 1.5em;
-    margin-bottom: 2.5em;
+    margin-bottom: 2em;
+    margin-top: 0.2em;
   }
 }
 
 .random {
   @extend .all;
-  h2 {
-    top: 22em;
+  h3 {
+    top: 25em;
   }
-}
-
-// --- Nav Bar ---
-
-.nav {
-  width: 94%;
-  background-color: $main-color;
 }
 
 // --- Products Gallery ---
 
-.main {
-  margin-right: 0;
-}
-
 .product-card {
   margin-top: 1.5em;
-  margin-left: 0.7em;
-  margin-right: 0;
   display: flex;
   gap: 0.3em;
   img {
-    width: 30%;
+    width: 50%;
     height: 20vh;
     object-fit: contain;
   }
 }
 
+hr {
+  width: 21.5em;
+  margin-left: 1em;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+  border: 2px solid $light-color;
+}
+
 .content {
-  margin-top: 1em;
-  width: 45%;
+  width: 90%;
   h3 {
-    font-size: 1.875em;
+    font-size: 1.5em;
   }
   p {
     &:nth-of-type(1) {
       font-weight: 600;
-      font-size: 0.8em;
+      font-size: 1em;
       color: $main-color;
-      width: 100%;
+      margin-bottom: 0.5em;
     }
     &:nth-of-type(2) {
-      font-size: 0.5em;
+      font-size: 0.9em;
+      font-weight: 600;
+      margin-bottom: 1.5em;
+    }
+  }
+}
+
+// --- Details and Random ---
+
+.details {
+  margin-left: 2.7em;
+  margin-bottom: 12em;
+  width: 100%;
+  img {
+    width: 30%;
+    margin-left: 6.5em;
+    margin-top: 3.5em;
+    margin-bottom: 1em;
+  }
+  h3 {
+    font-size: 3em;
+    font-weight: 600;
+    margin-bottom: 0.1em;
+  }
+  p {
+    &:nth-of-type(1) {
+      color: $main-color;
+      font-weight: 600;
+      font-size: 1.2em;
+      margin-bottom: 0.5em;
+    }
+    &:nth-of-type(2) {
+      color: $light-color;
+      span {
+        margin-left: 9em;
+      }
+    }
+    &:nth-of-type(3) {
+      color: $light-color;
+      margin-bottom: 0.7em;
+      span {
+        margin-left: 7.4em;
+      }
+    }
+    &:nth-of-type(4) {
+      width: 90%;
+      font-weight: 600;
     }
   }
 }
