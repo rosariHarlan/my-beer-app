@@ -1,7 +1,6 @@
 import { withRouter, Link } from "react-router-dom";
 import { getBeer } from "./../BeerAPI";
 import { Component } from "react";
-import NavBar from "./Navbar";
 import arrow from "./../arrow.png";
 
 class Details extends Component {
@@ -45,8 +44,6 @@ class Details extends Component {
               <img src={arrow} alt="arrow" />
             </Link>
           </span>
-
-          <NavBar />
         </div>
       </section>
     );

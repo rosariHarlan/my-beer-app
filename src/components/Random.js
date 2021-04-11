@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import NavBar from "./Navbar";
 import arrow from "./../arrow.png";
 
 const Random = (props) => {
@@ -18,15 +17,18 @@ const Random = (props) => {
         <img src={image_url} alt={name} />
         <h3>{name}</h3>
         <p>{tagline}</p>
-        <p>First brewed: {first_brewed}</p>
-        <p>Attenuation level: {attenuation_level}</p>
+        <p>
+          First brewed: <span>{first_brewed}</span>
+        </p>
+        <p>
+          Attenuation level: <span>{attenuation_level}</span>
+        </p>
         <p>{description}</p>
         <span className="arrow">
           <Link to="/">
             <img src={arrow} alt="arrow" />
           </Link>
         </span>
-        <NavBar />
       </div>
     </section>
   );
