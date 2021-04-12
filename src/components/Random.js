@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import arrow from "./../arrow.png";
+import Navbar from "./Navbar";
 
 const Random = (props) => {
   const {
@@ -24,12 +25,15 @@ const Random = (props) => {
           Attenuation level: <span>{attenuation_level}</span>
         </p>
         <p>{description}</p>
-        <span className="arrow">
-          <Link to="/">
-            <img src={arrow} alt="arrow" />
-          </Link>
-        </span>
+        <div className="arrow-container">
+          <span className="arrow">
+            <Link to="/">
+              <img src={arrow} alt="arrow" />
+            </Link>
+          </span>
+        </div>
       </div>
+      <Navbar />
     </section>
   );
 };

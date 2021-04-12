@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
 
 const AllBeers = (props) => {
   return (
@@ -21,6 +22,7 @@ const AllBeers = (props) => {
           </div>
         ))}
       </div>
+      <Navbar />
     </section>
   );
 };

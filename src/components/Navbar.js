@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import beerIcon from "./../beer-icon.png";
 
-const NavBar = () => {
+const Navbar = () => {
   return (
     <header className="nav-container">
       <nav>
@@ -13,4 +13,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Navbar;
