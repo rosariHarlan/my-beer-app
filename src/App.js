@@ -24,7 +24,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div>
+        <main>
           <Switch>
             <Route path="/details/:id">
               <Details />
@@ -39,7 +39,7 @@ class App extends Component {
               <Home />
             </Route>
           </Switch>
-        </div>
+        </main>
       </Router>
     );
   }

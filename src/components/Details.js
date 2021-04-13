@@ -2,14 +2,16 @@ import { useParams, Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import arrow from "./../arrow.png";
+import axios from "axios";
 
 const _test = () => {
   let { id } = useParams();
   const [oneBeer, setOneBeer] = useState(null);
+
   useEffect(() => {
-    fetch("https://ih-beers-api2.herokuapp.com/beers/" + id)
-      .then((res) => res.json())
-      .then((res) => setOneBeer(res));
+    axios
+      .get("https://ih-beers-api2.herokuapp.com/beers/" + id)
+      .then((res) => setOneBeer(res.data));
   }, [id]);
 
   if (!oneBeer) {
