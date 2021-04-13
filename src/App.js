@@ -1,11 +1,12 @@
 import "./App.scss";
 import Home from "./components/Home";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route, withRouter } from "react-router-dom";
 import AllBeers from "./components/AllBeers";
 import { Component } from "react";
 import Details from "./components/Details";
 import { getAllBeers, getRandomBeer } from "./BeerAPI";
 import Random from "./components/Random";
+import Navbar from "./components/Navbar";
 
 class App extends Component {
   constructor(props) {
@@ -23,7 +24,7 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
+      <div>
         <main>
           <Switch>
             <Route path="/details/:id">
@@ -40,9 +41,12 @@ class App extends Component {
             </Route>
           </Switch>
         </main>
-      </Router>
+        <footer>
+          {this.props.location.pathname === "/" ? "" : <Navbar />}
+        </footer>
+      </div>
     );
   }
 }
 
-export default App;
+export default withRouter(App);

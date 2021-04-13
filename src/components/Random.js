@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import arrow from "./../arrow.png";
-import Navbar from "./Navbar";
 
 const Random = (props) => {
   const {
@@ -33,7 +32,6 @@ const Random = (props) => {
           </span>
         </div>
       </div>
-      <Navbar />
     </section>
   );
 };

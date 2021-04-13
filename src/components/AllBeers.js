@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
-import Navbar from "./Navbar";
 
 const AllBeers = (props) => {
   return (
     <section id="all">
       <div className="gallery">
         {props.beerData.map((item, i) => (
-          <div>
-            <div className="product-card" key={i}>
+          <div key={i}>
+            <div className="product-card">
               <img src={item.image_url} alt="beer" />
               <div className="content">
                 <h3>{item.name}</h3>
@@ -22,7 +21,6 @@ const AllBeers = (props) => {
           </div>
         ))}
       </div>
-      <Navbar />
     </section>
   );
 };

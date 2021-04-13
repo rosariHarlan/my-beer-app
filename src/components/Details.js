@@ -1,10 +1,9 @@
 import { useParams, Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
-import Navbar from "./Navbar";
 import arrow from "./../arrow.png";
 import axios from "axios";
 
-const _test = () => {
+const Details = () => {
   let { id } = useParams();
   const [oneBeer, setOneBeer] = useState(null);
 
@@ -48,9 +47,8 @@ const _test = () => {
           </span>
         </div>
       </div>
-      <Navbar />
     </section>
   );
 };
 
-export default _test;
+export default Details;
